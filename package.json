@@ -1,0 +1,26 @@
+{
+    "name": "image-search-abstraction-layer",
+    "version": "1.0.0",
+    "description": "Returns image URL information from Google CSE.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "4.x.x",
+        "mongodb": "^3.x.x",
+        "google-search": "0.0.5"
+    },
+    "engines": {
+        "node": "8.x"
+    },
+    "repository": {
+        "url": "https://glitch.com/edit/#!/welcome-project"
+    },
+    "license": "MIT",
+    "keywords": [
+        "node",
+        "glitch",
+        "express"
+    ]
+}
