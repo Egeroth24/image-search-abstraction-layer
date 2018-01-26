@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Search Abstraction Layer</title>
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/b96dc8b7-b0ca-4d2c-9304-5b9c4c602296%2Ffavicon.ico?1516977071065" type="image/x-icon">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Image Search Abstraction Layer</h1>
+      <blockquote>
+        User Stories:
+        <ol>
+          <li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+          <li> I can paginate through the responses by adding a ?offset=# parameter to the URL.</li>
+          <li>I can get a list of the most recently submitted search strings.</li>
+        </ol>
+      </blockquote>
+      <h2>Example Usage:</h2>
+      <code>https://https://nine-flier.glitch.me/.glitch.me/cute%20kittens</code> <br />
+      <code>https://https://nine-flier.glitch.me/.glitch.me/latest</code>
+      <h2>Example Output:</h2>
+      <p><i>I recommend a formatting extension (I use <a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" target="_blank">this one</a> for Chrome) when viewing JSON in the browser.</i></p>
+      <code>
+        [<br />
+        {"image-url": "http://kittentoob.com/wp-content/uploads/2015/08/all-the-cute-kittens.jpg", "alt-text": "20 Kittens So Cute it Hurts to Look at Them", "page-url": "http://kittentoob.com/cat-galleries/20-kittens-so-cute-it-hurts-to-look-at-them/"},<br />
+        {"image-url": "http://www.awesomelycute.com/gallery/2014/11/cute-kittens-awesomelycute.com-18.jpg", "alt-text": "Here are 20 kittens that will make your day!", "page-url": "http://www.awesomelycute.com/2014/11/here-are-20-kittens-that-will-make-your-day/"}<br />
+        ...<br />
+        {"image-url": "http://www.awesomelycute.com/gallery/2014/11/cute-kittens-awesomelycute.com-14.jpg","alt-text": "Here are 20 kittens that will make your day!","page-url": "http://www.awesomelycute.com/2014/11/here-are-20-kittens-that-will-make-your-day/"}<br />
+        ]
+      </code>
+      <br />
+      <br />
+      <code>
+        [<br />
+        {"search": "https://nine-flier.glitch.me//cute%20kittens", "when": "2018-01-26T13:48:23.285Z"}, <br />
+        {"search": "https://nine-flier.glitch.me//kittens", "when": "2018-01-26T13:48:17.718Z"}, <br />
+        ... <br />
+        {"search": "https://nine-flier.glitch.me//apples", "when": "2018-01-26T13:48:14.108Z"}<br />
+        ]
+      </code>
+    </div>
+  </body>
+</html>
